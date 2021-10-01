@@ -2,9 +2,9 @@
     <div class="home-swiper">
          <swiper :options="swiperOption" ref="mySwiper">
             <swiper-slide v-for="(item,index) of swiperData" :key="index">
-                <a class="swiper-link" :href="item.linkUrl">
+                <router-link class="swiper-link" :to="item.linkUrl">
                     <img class="swiper-img" :src="item.imgUrl" alt="">
-                </a>
+                </router-link>
             </swiper-slide>
             <div class="swiper-pagination"  slot="pagination"></div>           
         </swiper>
