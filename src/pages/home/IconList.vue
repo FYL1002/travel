@@ -84,7 +84,7 @@ export default {
         flex-direction: column;
 
         img {
-            width: 50%;
+            height: 50%;
             padding-bottom: .1rem;
         }
     }
