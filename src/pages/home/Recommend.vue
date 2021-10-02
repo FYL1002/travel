@@ -31,7 +31,7 @@ export default {
                     price: 200
                 },
                 {
-                    id: 1,
+                    id: 2,
                     linkUrl: "https://piao.qunar.com/ticket/detail_193517.html#from=home_remen&in_track=qunar_djmp_pic_193517",
                     imgUrl: "https://img1.qunarzz.com/sight/p0/2109/a4/a4aa0a34e9ec3de1a3.img.jpg_256x160_b198c86f.jpg",
                     title: "珠海长隆海洋王国",
@@ -39,7 +39,7 @@ export default {
                     price: 200
                 },
                 {
-                    id: 1,
+                    id: 3,
                     linkUrl: "https://piao.qunar.com/ticket/detail_193517.html#from=home_remen&in_track=qunar_djmp_pic_193517",
                     imgUrl: "https://img1.qunarzz.com/sight/p0/2109/a4/a4aa0a34e9ec3de1a3.img.jpg_256x160_b198c86f.jpg",
                     title: "珠海长隆海洋王国",
@@ -47,7 +47,7 @@ export default {
                     price: 200
                 },
                 {
-                    id: 1,
+                    id: 4,
                     linkUrl: "https://piao.qunar.com/ticket/detail_193517.html#from=home_remen&in_track=qunar_djmp_pic_193517",
                     imgUrl: "https://img1.qunarzz.com/sight/p0/2109/a4/a4aa0a34e9ec3de1a3.img.jpg_256x160_b198c86f.jpg",
                     title: "珠海长隆海洋王国",
