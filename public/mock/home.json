@@ -1,0 +1,123 @@
+{
+    "ret": true,
+    "data": {
+        "city": "深圳",
+        "swiperData":[
+            {
+                "linkUrl": "",
+                "imgUrl": "https://aecpm.alicdn.com/simba/img/TB1_JXrLVXXXXbZXVXXSutbFXXX.jpg"
+            },
+            {
+                "linkUrl": "",
+                "imgUrl": "https://img.alicdn.com/imgextra/i2/O1CN01betoyt29ZbiEDexSS_!!6000000008082-0-tps-1130-500.jpg_q100.jpg_.webp"
+            }
+        ],
+        "iconList":[
+            {
+                "id": 1,
+                "linkUrl": "/",
+                "imgUrl": "https://s.qunarzz.com/homenode/images/touchheader/hotel.png",
+                "text": "酒店"
+            },
+            {
+                "id": 2,
+                "linkUrl": "/",
+                "imgUrl": "https://s.qunarzz.com/homenode/images/touchheader/flight.png",
+                "text": "机票"
+            },
+            {
+                "id": 3,
+                "linkUrl": "/",
+                "imgUrl": "https://s.qunarzz.com/homenode/images/touchheader/train.png",
+                "text": "火车票"
+            },
+            {
+                "id": 4,
+                "linkUrl": "/",
+                "imgUrl": "https://s.qunarzz.com/homenode/images/touchheader/package.png",
+                "text": "度假"
+            },
+            {
+                "id": 5,
+                "linkUrl": "/",
+                "imgUrl": "https://s.qunarzz.com/homenode/images/touchheader/piao.png",
+                "text": "景点门票"
+            },
+            {
+                "id": 6,
+                "linkUrl": "/",
+                "imgUrl": "https://picbed.qunarzz.com/377db8cb2143aebf01869c9baad3d325.png",
+                "text": "汽车票船票"
+            },
+            {
+                "id": 7,
+                "linkUrl": "",
+                "imgUrl": "https://picbed.qunarzz.com/1316dc82d1ce6259686d5a68880e5a9d.png",
+                "text": "攻略"
+            },
+            {
+                "id": 8,
+                "linkUrl": "",
+                "imgUrl": "https://picbed.qunarzz.com/ae617a31e0bd5803d76918b817f6d942.png",
+                "text": "自由行"
+            }
+        ],
+        "recommendList":[
+            {
+                "id": 1,
+                "linkUrl": "https://piao.qunar.com/ticket/detail_193517.html#from=home_remen&in_track=qunar_djmp_pic_193517",
+                "imgUrl": "https://img1.qunarzz.com/sight/p0/2109/a4/a4aa0a34e9ec3de1a3.img.jpg_256x160_b198c86f.jpg",
+                "title": "珠海长隆海洋王国",
+                "des": "亚洲首台水上过山车 时空裂缝技术开发楼市房价考虑是否深刻理解发",
+                "price": 200
+            },
+            {
+                "id": 2,
+                "linkUrl": "https://piao.qunar.com/ticket/detail_193517.html#from=home_remen&in_track=qunar_djmp_pic_193517",
+                "imgUrl": "https://img1.qunarzz.com/sight/p0/2109/a4/a4aa0a34e9ec3de1a3.img.jpg_256x160_b198c86f.jpg",
+                "title": "珠海长隆海洋王国",
+                "des": "亚洲首台水上过山车 时空裂缝技术开发楼市房价考虑是否深刻理解发",
+                "price": 200
+            },
+            {
+                "id": 3,
+                "linkUrl": "https://piao.qunar.com/ticket/detail_193517.html#from=home_remen&in_track=qunar_djmp_pic_193517",
+                "imgUrl": "https://img1.qunarzz.com/sight/p0/2109/a4/a4aa0a34e9ec3de1a3.img.jpg_256x160_b198c86f.jpg",
+                "title": "珠海长隆海洋王国",
+                "des": "亚洲首台水上过山车 时空裂缝技术开发楼市房价考虑是否深刻理解发",
+                "price": 200
+            },
+            {
+                "id": 4,
+                "linkUrl": "https://piao.qunar.com/ticket/detail_193517.html#from=home_remen&in_track=qunar_djmp_pic_193517",
+                "imgUrl": "https://img1.qunarzz.com/sight/p0/2109/a4/a4aa0a34e9ec3de1a3.img.jpg_256x160_b198c86f.jpg",
+                "title": "珠海长隆海洋王国",
+                "des": "亚洲首台水上过山车 时空裂缝技术开发楼市房价考虑是否深刻理解发",
+                "price": 200
+            }
+        ],
+        "weekendList": [
+            {
+                "id": 1,
+                "linkUrl": "https://piao.qunar.com/ticket/detail_14709.html#from=home_remen&in_track=qunar_djmp_pic_14709",
+                "imgUrl": "https://img1.qunarzz.com/sight/p0/2109/ef/ef7167fdddb0f6da3.img.jpg_256x160_775adc4a.jpg",
+                "title": "长隆野生动物世界",
+                "des": "《爸爸去哪儿》拍摄地"
+            },
+             {
+                "id": 2,
+                "linkUrl": "https://piao.qunar.com/ticket/detail_10462.html#from=home_remen&in_track=qunar_djmp_pic_10462",
+                "imgUrl": "https://img1.qunarzz.com/sight/p0/2109/5f/5f399569a46896a9a3.water.jpg_256x160_af289ba7.jpg",
+                "title": "深圳欢乐谷",
+                "des": "丰富多彩的水陆游乐项目"
+            },
+             {
+                "id": 3,
+                "linkUrl": "https://piao.qunar.com/ticket/detail_191026.html#from=home_remen&in_track=qunar_djmp_pic_191026",
+                "imgUrl": "https://img1.qunarzz.com/sight/p0/2108/c9/c9b1feb9dd84cc1a3.img.jpg_256x160_4c163f2d.jpg",
+                "title": "世界之窗",
+                "des": "看全球名胜缩影环游世界"
+            }
+        ]
+    }
+}

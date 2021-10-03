@@ -19,42 +19,12 @@
 <script>
 export default {
     name: "Recommend",
+    props: {
+        recommendList: Array
+    },
     data(){
-        return{
-            recommendList:[
-                {
-                    id: 1,
-                    linkUrl: "https://piao.qunar.com/ticket/detail_193517.html#from=home_remen&in_track=qunar_djmp_pic_193517",
-                    imgUrl: "https://img1.qunarzz.com/sight/p0/2109/a4/a4aa0a34e9ec3de1a3.img.jpg_256x160_b198c86f.jpg",
-                    title: "珠海长隆海洋王国",
-                    des: "亚洲首台水上过山车 时空裂缝技术开发楼市房价考虑是否深刻理解发",
-                    price: 200
-                },
-                {
-                    id: 2,
-                    linkUrl: "https://piao.qunar.com/ticket/detail_193517.html#from=home_remen&in_track=qunar_djmp_pic_193517",
-                    imgUrl: "https://img1.qunarzz.com/sight/p0/2109/a4/a4aa0a34e9ec3de1a3.img.jpg_256x160_b198c86f.jpg",
-                    title: "珠海长隆海洋王国",
-                    des: "亚洲首台水上过山车 时空裂缝技术开发楼市房价考虑是否深刻理解发",
-                    price: 200
-                },
-                {
-                    id: 3,
-                    linkUrl: "https://piao.qunar.com/ticket/detail_193517.html#from=home_remen&in_track=qunar_djmp_pic_193517",
-                    imgUrl: "https://img1.qunarzz.com/sight/p0/2109/a4/a4aa0a34e9ec3de1a3.img.jpg_256x160_b198c86f.jpg",
-                    title: "珠海长隆海洋王国",
-                    des: "亚洲首台水上过山车 时空裂缝技术开发楼市房价考虑是否深刻理解发",
-                    price: 200
-                },
-                {
-                    id: 4,
-                    linkUrl: "https://piao.qunar.com/ticket/detail_193517.html#from=home_remen&in_track=qunar_djmp_pic_193517",
-                    imgUrl: "https://img1.qunarzz.com/sight/p0/2109/a4/a4aa0a34e9ec3de1a3.img.jpg_256x160_b198c86f.jpg",
-                    title: "珠海长隆海洋王国",
-                    des: "亚洲首台水上过山车 时空裂缝技术开发楼市房价考虑是否深刻理解发",
-                    price: 200
-                },
-            ]
+        return {
+          
         }
     }
 }

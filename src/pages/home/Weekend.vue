@@ -16,32 +16,8 @@
 <script>
 export default {
     name: "Weekend",
-    data(){
-        return {
-            weekendList: [
-                {
-                    id: 1,
-                    linkUrl: "https://piao.qunar.com/ticket/detail_14709.html#from=home_remen&in_track=qunar_djmp_pic_14709",
-                    imgUrl: "https://img1.qunarzz.com/sight/p0/2109/ef/ef7167fdddb0f6da3.img.jpg_256x160_775adc4a.jpg",
-                    title: "长隆野生动物世界",
-                    des: "《爸爸去哪儿》拍摄地",
-                },
-                 {
-                    id: 2,
-                    linkUrl: "https://piao.qunar.com/ticket/detail_10462.html#from=home_remen&in_track=qunar_djmp_pic_10462",
-                    imgUrl: "https://img1.qunarzz.com/sight/p0/2109/5f/5f399569a46896a9a3.water.jpg_256x160_af289ba7.jpg",
-                    title: "深圳欢乐谷",
-                    des: "丰富多彩的水陆游乐项目",
-                },
-                 {
-                    id: 3,
-                    linkUrl: "https://piao.qunar.com/ticket/detail_191026.html#from=home_remen&in_track=qunar_djmp_pic_191026",
-                    imgUrl: "https://img1.qunarzz.com/sight/p0/2108/c9/c9b1feb9dd84cc1a3.img.jpg_256x160_4c163f2d.jpg",
-                    title: "世界之窗",
-                    des: "看全球名胜缩影环游世界",
-                },
-            ]
-        }
+    props: {
+        weekendList: Array
     }
 }
 </script>

@@ -7,7 +7,7 @@
             <span class="iconfont">&#xe632;</span>
             <input type="text" class="inputBox" placeholder="输入城市/景点/游玩主题">
         </div>
-        <div class="head-right">城市
+        <div class="head-right">{{city}}
             <span class="iconfont arrow-down">&#xe64a;</span>
         </div>
     </div>
@@ -16,7 +16,9 @@
 <script>
 export default {
     name: 'HomeHead',
-
+    props: {
+        city: String
+    }
 }
 </script>
 
@@ -50,8 +52,6 @@ export default {
                 box-sizing: border-box;
                 flex: 1;
                 padding: 0 .06rem;
-            
-                
             }
         }
         .head-right {
@@ -59,9 +59,7 @@ export default {
             .iconfont.arrow-down{
                 font-size: .26rem;
             }
-        
-        }
-        
+        }   
     }
         
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div class="home-swiper">
-         <swiper :options="swiperOption" ref="mySwiper">
+         <swiper :options="swiperOption" ref="mySwiper" v-if="swiperData.length">
             <swiper-slide v-for="(item,index) of swiperData" :key="index">
                 <router-link class="swiper-link" :to="item.linkUrl">
                     <img class="swiper-img" :src="item.imgUrl" alt="">
@@ -14,6 +14,9 @@
 <script>
 export default {
     name: "HomeSwiper",
+    props: {
+        swiperData: Array
+    },
     data(){
         return{
             swiperOption: {              
@@ -23,20 +26,9 @@ export default {
                 initialSlide: 1,
                 pagination: '.swiper-pagination',
                 paginationClickable: true
-            },
-            swiperData:[
-                {
-                    linkUrl: '',
-                    imgUrl: 'https://aecpm.alicdn.com/simba/img/TB1_JXrLVXXXXbZXVXXSutbFXXX.jpg'
-                },
-                {
-                    linkUrl: '',
-                    imgUrl: 'https://img.alicdn.com/imgextra/i2/O1CN01betoyt29ZbiEDexSS_!!6000000008082-0-tps-1130-500.jpg_q100.jpg_.webp'
-                }
-            ]
+            }
         }
     }
-    
 }
 </script>
 
@@ -64,7 +56,6 @@ export default {
                 height: 100%;
             }
         }
-       
     }
 }
 </style>
