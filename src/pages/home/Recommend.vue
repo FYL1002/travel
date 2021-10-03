@@ -67,8 +67,9 @@ export default {
     .recommend-title {
         background: $greyColor;
         text-align: left;
-        height: .6rem;
-        line-height: .6rem;
+        height: .62rem;
+        line-height: .62rem;
+        font-size: .3rem;
         text-indent: .2rem;
     }
     .recommend-list {
