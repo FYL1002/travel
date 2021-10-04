@@ -16,8 +16,8 @@ export default {
 <style lang="scss" scoped>
 @import "~@/assets/styles/mixins";
 .head-wrapper{
-    height: .86rem;
-    line-height: .86rem;
+    height: $headHeight;
+    line-height: $headHeight;
     background: $bgColor;
     color: #fff;
     font-size: .32rem;

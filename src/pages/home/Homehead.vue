@@ -30,8 +30,8 @@ export default {
         display: flex;
         align-items: center;
         width: 100%;
-        height: .86rem;
-        line-height: .86rem;
+        height: $headHeight;
+        line-height: $headHeight;
         background: $bgColor;
         color: #fff;
 
