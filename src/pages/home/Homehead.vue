@@ -7,9 +7,11 @@
             <span class="iconfont">&#xe632;</span>
             <input type="text" class="inputBox" placeholder="输入城市/景点/游玩主题">
         </div>
-        <div class="head-right">{{city}}
-            <span class="iconfont arrow-down">&#xe64a;</span>
-        </div>
+        <router-link to="/city">
+            <div class="head-right">{{city}}
+                <span class="iconfont arrow-down">&#xe64a;</span>
+            </div>
+        </router-link>
     </div>
 </template>
 
@@ -56,10 +58,10 @@ export default {
         }
         .head-right {
             width: 1.2rem;
+            color: #fff;
             .iconfont.arrow-down{
                 font-size: .26rem;
             }
         }   
     }
-        
 </style>
