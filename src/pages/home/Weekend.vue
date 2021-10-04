@@ -27,7 +27,7 @@ export default {
 .weekend-wrapper {
     width: 100%;
     .weekend-title {
-        background: $greyColor;
+        background: $bgColorTitle;
         text-align: left;
         height: .62rem;
         line-height: .62rem;
