@@ -2,7 +2,8 @@
     <div class="city-wrapper">
         <city-head></city-head>
         <city-search></city-search>
-        <city-list></city-list>
+        <city-list :cities="cities" :hotCities="hotCities"></city-list>
+        <alphabet :cities="cities"></alphabet>
     </div>
 </template>
 
@@ -10,13 +11,42 @@
 import CityHead from "../pages/city/CityHead.vue"
 import CitySearch from "../pages/city/Search.vue"
 import CityList from "../pages/city/CityList.vue"
+import Alphabet from "../pages/city/Alphabet.vue"
+import axios from "axios"
 
 export default {
     name: "City",
     components: {
         CityHead,
         CitySearch,
-        CityList
+        CityList,
+        Alphabet
+    },
+    data(){
+        return {
+            hotCities: [],
+            cities: {}
+        }
+    },
+    mounted(){
+        this.getData();
+    },
+    methods: {
+        getData (){
+            axios.get('/mock/city.json').then(
+                res=>{
+                    res = res.data;
+                    if(res.ret && res.data){
+                        const data = res.data;
+                        this.hotCities = data.hotCities;
+                        this.cities = data.cities;     
+                    }                  
+                },
+                error=>{
+                    console.log(error);
+                }
+            )
+        }
     }
 }
 </script>
@@ -24,5 +54,6 @@ export default {
 <style lang="scss" scoped>
 .city-wrapper {
     width: 100%;
+    overflow: hidden;
 }
 </style>
