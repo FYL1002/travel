@@ -2,8 +2,8 @@
     <div class="city-wrapper">
         <city-head></city-head>
         <city-search></city-search>
-        <city-list :cities="cities" :hotCities="hotCities"></city-list>
-        <alphabet :cities="cities"></alphabet>
+        <city-list :cities="cities" :hotCities="hotCities" :letter="letter"></city-list>
+        <alphabet :cities="cities" @change="handleTouchMove"></alphabet>
     </div>
 </template>
 
@@ -13,6 +13,9 @@ import CitySearch from "../pages/city/Search.vue"
 import CityList from "../pages/city/CityList.vue"
 import Alphabet from "../pages/city/Alphabet.vue"
 import axios from "axios"
+import Vue from 'vue'
+
+Vue.prototype.bus = new Vue()
 
 export default {
     name: "City",
@@ -25,7 +28,8 @@ export default {
     data(){
         return {
             hotCities: [],
-            cities: {}
+            cities: {},
+            letter: ''
         }
     },
     mounted(){
@@ -46,6 +50,9 @@ export default {
                     console.log(error);
                 }
             )
+        },
+        handleTouchMove(e){
+            this.letter = e;
         }
     }
 }

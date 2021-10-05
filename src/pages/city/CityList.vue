@@ -19,7 +19,7 @@
                     </div>
                 </div>
             </div>
-            <div class="area" v-for="(city,key) of cities" :key="key">   
+            <div class="area" v-for="(city,key) of cities" :key="key" :ref="key">   
                 <div class="title">
                     {{key}}
                 </div>
@@ -42,14 +42,36 @@ export default {
     name: "CityList",
     props: {
         hotCities: Array,
-        cities: Object
+        cities: Object,
+        letter: String
+    },
+    data(){
+        return {
+            
+        }
     },
     mounted(){
-        this.scroll= new BScroll(this.$refs.cityList);   
+        this.scroll= new BScroll(this.$refs.cityList);  
+        this.bus.$on("letterSelect", e=>{
+            const el = this.$refs[e][0];
+            if(el){
+                this.scroll.scrollToElement(el);
+            }
+        }) 
     },
     updated(){
         this.scroll.refresh()
+    },
+    watch: {
+        letter(){
+            this.scroll.scrollToElement(this.$refs[this.letter][0]);
+        }
+    },
+    destroyed(){
+        // 避免路由跳转多个组件重复监听,emit触发第一次 $on监听不到
+        this.bus.$off("letterSelect");
     }
+
 }
 </script>
 
