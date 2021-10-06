@@ -1,7 +1,7 @@
 <template>
     <div class="city-wrapper">
         <city-head></city-head>
-        <city-search></city-search>
+        <city-search :cities="cities"></city-search>
         <city-list :cities="cities" :hotCities="hotCities" :letter="letter"></city-list>
         <alphabet :cities="cities" @change="handleTouchMove"></alphabet>
     </div>

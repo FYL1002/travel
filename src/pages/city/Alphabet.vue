@@ -21,8 +21,9 @@ export default {
     },
     data(){
         return{
-            touchStatus:false,
-            letters:[]
+            touchStatus: false,
+            letters: [],
+            timer: null
         }
     },
     updated(){
@@ -41,11 +42,19 @@ export default {
         },
         handleTouchMove(e){
             if(this.touchStatus){
-                const touchY = e.touches[0].clientY-79;
-                const moveLength= Math.floor((touchY-this.startY)/18);
-                if(moveLength && moveLength>0 && moveLength<this.letters.length){
-                    this.$emit('change',this.letters[moveLength]);  
+                if(this.timer){
+                    clearTimeout(this.timer);
+                    this.timer = null;
                 }
+                else{
+                        this.timer = setTimeout(() => {
+                        const touchY = e.touches[0].clientY-79;
+                        const moveLength= Math.floor((touchY-this.startY)/18);
+                        if(moveLength && moveLength>0 && moveLength<this.letters.length){                         
+                            this.$emit('change',this.letters[moveLength]);  
+                        }
+                        }, 20);
+                    }
             }
         },
         handleTouchEnd(){
@@ -65,7 +74,7 @@ export default {
     bottom: 0;
     right: 0;
     left: auto;
-    z-index: 999;
+    z-index: 99;
     display: flex;
     justify-content: center;
     flex-direction: column;
