@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <home-head :city="city"></home-head>
+    <home-head></home-head>
     <home-swiper :swiperData="swiperData"></home-swiper>
     <icon-list :iconList="iconList"></icon-list>
     <recommend :recommendList="recommendList"></recommend>
@@ -28,7 +28,6 @@ export default {
   },
   data() {
     return {
-      city: "",
       swiperData: [],
       iconList: [],
       recommendList: [],
@@ -38,7 +37,6 @@ export default {
   created() {
     axios.get('/mock/home.json').then(
       res => {
-        this.city = res.data.data.city;
         this.swiperData = res.data.data.swiperData;
         this.iconList = res.data.data.iconList;
         this.recommendList = res.data.data.recommendList;

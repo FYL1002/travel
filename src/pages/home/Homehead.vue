@@ -8,7 +8,7 @@
             <input type="text" class="inputBox" placeholder="输入城市/景点/游玩主题">
         </div>
         <router-link to="/city">
-            <div class="head-right">{{city}}
+            <div class="head-right">{{$store.state.city}}
                 <span class="iconfont arrow-down">&#xe64a;</span>
             </div>
         </router-link>
@@ -18,9 +18,6 @@
 <script>
 export default {
     name: 'HomeHead',
-    props: {
-        city: String
-    }
 }
 </script>
 
@@ -57,7 +54,8 @@ export default {
             }
         }
         .head-right {
-            width: 1.2rem;
+            @include ellipsis;
+            min-width: 1.2rem;
             color: #fff;
             .iconfont.arrow-down{
                 font-size: .26rem;

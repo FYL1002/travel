@@ -6,7 +6,7 @@
                     您的位置
                 </div>
                 <div class="content">
-                    <div class="current-city"><div class="button-box">深圳</div></div>
+                    <div class="current-city"><div class="button-box">{{ $store.state.city }}</div></div>
                 </div>
             </div>
             <div class="area">
@@ -15,7 +15,7 @@
                 </div>
                 <div class="content">
                     <div class="current-city" v-for="item of hotCities" :key="item.id">
-                        <div class="button-box">{{item.name}}</div>
+                        <div class="button-box" @click="handleCity(item.name)">{{item.name}}</div>
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                 </div>
                 <div class="content all-city">
                     <ul class="city-list">
-                        <li class="city-item" v-for="item of city" :key="item.id">
+                        <li class="city-item" v-for="item of city" :key="item.id" @click="handleCity(item.name)">
                             {{item.name}}
                         </li>
                     </ul>
@@ -65,6 +65,12 @@ export default {
     watch: {
         letter(){
             this.scroll.scrollToElement(this.$refs[this.letter][0]);
+        }
+    },
+    methods: {
+        handleCity(city){
+            this.$store.commit("changeCity",city);
+            this.$router.push("/");
         }
     },
     destroyed(){
