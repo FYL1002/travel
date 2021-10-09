@@ -2,12 +2,14 @@
     <div class="weekend-wrapper">
         <div class="weekend-title">周末去哪儿</div>
         <ul class="weekend-list">
-            <router-link tag="li" class="weekend-item border-bottom" v-for="item of weekendList" :key="item.id" :to="item.linkUrl" >
-                <div class="img-wrapper">
+            <router-link v-slot="{ navigate }" custom class="weekend-item border-bottom" v-for="item of weekendList" :key="item.id" :to="item.linkUrl" >
+                <li @click="navigate" @keypress.enter="navigate" role="link">
+                    <div class="img-wrapper">
                     <img :src="item.imgUrl" alt="">
-                </div>
-                <div class="item-title">{{ item.title }}</div>
-                <div class="item-des">{{ item.des }}</div>
+                    </div>
+                    <div class="item-title">{{ item.title }}</div>
+                    <div class="item-des">{{ item.des }}</div>
+                </li>
             </router-link>
         </ul>
     </div>

@@ -2,15 +2,17 @@
     <div class="recommend-wrapper">
         <div class="recommend-title">热销推荐</div>
         <ul class="recommend-list">
-            <router-link tag="li" class="recommend-item border-bottom" v-for="item of recommendList" :key="item.id" :to="item.linkUrl" >
-                <div class="item-left">
-                    <img :src="item.imgUrl" alt="">
-                </div>
-                <div class="item-right">
-                    <div class="title">{{ item.title }}</div>
-                    <div class="des">{{ item.des }}</div>
-                    <div class="price"><span class="price-value">￥{{ item.price }}</span> 起</div>
-                </div>
+            <router-link v-slot="{ navigate }" custom class="recommend-item border-bottom" v-for="item of recommendList" :key="item.id" :to="item.linkUrl" >
+                <li @click="navigate" @keypress.enter="navigate" role="link">
+                    <div class="item-left">
+                        <img :src="item.imgUrl" alt="">
+                    </div>
+                    <div class="item-right">
+                        <div class="title">{{ item.title }}</div>
+                        <div class="des">{{ item.des }}</div>
+                        <div class="price"><span class="price-value">￥{{ item.price }}</span> 起</div>
+                    </div>
+                </li>
             </router-link>
         </ul>
     </div>

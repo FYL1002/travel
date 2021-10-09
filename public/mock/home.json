@@ -15,13 +15,13 @@
         "iconList":[
             {
                 "id": 1,
-                "linkUrl": "/",
+                "linkUrl": "/www.baidu.com",
                 "imgUrl": "https://s.qunarzz.com/homenode/images/touchheader/hotel.png",
                 "text": "酒店"
             },
             {
                 "id": 2,
-                "linkUrl": "/",
+                "linkUrl": "/taobao.com",
                 "imgUrl": "https://s.qunarzz.com/homenode/images/touchheader/flight.png",
                 "text": "机票"
             },

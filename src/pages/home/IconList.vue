@@ -1,8 +1,10 @@
 <template>
     <ul class="icon-list">
-        <router-link tag="li" class="icon-item" v-for="item of iconList" :key="item.id" :to="item.linkUrl">
-            <img :src="item.imgUrl" alt="">
-            <span>{{item.text}}</span>
+        <router-link v-slot="{ href, navigate }" custom class="icon-item" v-for="item of iconList" :key="item.id" :to="item.linkUrl">
+            <li @click="navigate" :href="href">
+                <img :src="item.imgUrl" alt="">
+                <span>{{item.text}}</span>
+            </li>
         </router-link>
     </ul>
 </template>
