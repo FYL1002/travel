@@ -2,7 +2,7 @@
     <div class="recommend-wrapper">
         <div class="recommend-title">热销推荐</div>
         <ul class="recommend-list">
-            <router-link v-slot="{ navigate }" custom class="recommend-item border-bottom" v-for="item of recommendList" :key="item.id" :to="item.linkUrl" >
+            <router-link v-slot="{ navigate }" custom class="recommend-item border-bottom" v-for="item of recommendList" :key="item.id" :to="'/detail/' + item.id" >
                 <li @click="navigate" @keypress.enter="navigate" role="link">
                     <div class="item-left">
                         <img :src="item.imgUrl" alt="">
