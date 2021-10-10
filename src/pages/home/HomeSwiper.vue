@@ -1,6 +1,6 @@
 <template>
     <div class="home-swiper">
-         <swiper :options="swiperOption" ref="mySwiper" v-if="swiperData.length">
+        <swiper :options="swiperOption" ref="mySwiper" v-if="swiperData.length">
             <swiper-slide v-for="(item,index) of swiperData" :key="index">
                 <router-link class="swiper-link" :to="item.linkUrl">
                     <img class="swiper-img" :src="item.imgUrl" alt="">

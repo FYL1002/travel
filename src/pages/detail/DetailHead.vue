@@ -1,6 +1,7 @@
 <template>
-    <div class="detail-head">
-        <img src="https://dimg04.c-ctrip.com/images/300416000000yy81fEF51_C_750_420_Q90.jpg" alt="">
+    <div class="header">
+        <span class="iconfont back-icon">&#xe624;</span>
+        <span class="text">标题</span>
     </div>
 </template>
 
@@ -11,14 +12,38 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.detail-head {
+@import "~@/assets/styles/mixins";
+.header {
     width: 100%;
-    height: 0;
-    padding-bottom: 3rem;
-    background: #bbb;
-    
-    img {
-        width: 100%;
+    height: .88rem;
+    line-height: .88rem;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: $bgColor;
+    text-align: left;
+    display: none;
+
+    .back-icon {
+        display: inline-block;
+        width: .6rem;
+        height: .6rem;
+        line-height: .6rem;
+        text-align: center;
+        background: rgba(0,0,0,0.5);
+        color: rgb(255, 255, 255);
+        font-size: .32rem;
+        border-radius: 50%;
+        margin-left: .2rem;
     }
+    .text {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+
 }
 </style>
