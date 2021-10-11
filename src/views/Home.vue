@@ -31,21 +31,35 @@ export default {
       swiperData: [],
       iconList: [],
       recommendList: [],
-      weekendList: []
+      weekendList: [],
+      lastCity: ''
     }
   },
   created() {
-    axios.get('/mock/home.json').then(
-      res => {
-        this.swiperData = res.data.data.swiperData;
-        this.iconList = res.data.data.iconList;
-        this.recommendList = res.data.data.recommendList;
-        this.weekendList = res.data.data.weekendList
-      },
-      error => {
-        console.log(error);
-      }
-    )
+    this.lastCity = this.$store.state.city;
+    this.getHomeData();
+  },
+  activated() {
+    if(this.lastCity !== this.$store.state.city){
+      this.lastCity = this.$store.state.city;
+      this.getHomeData();
+    }
+  },
+  methods: {
+    getHomeData() {
+      let param = this.lastCity;
+      axios.get('/mock/home.json?city='+param).then(
+          res => {
+            this.swiperData = res.data.data.swiperData;
+            this.iconList = res.data.data.iconList;
+            this.recommendList = res.data.data.recommendList;
+            this.weekendList = res.data.data.weekendList
+          },
+          error => {
+            console.log(error);
+          }
+        )
+    }
   }
   
 }

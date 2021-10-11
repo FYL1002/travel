@@ -1,13 +1,34 @@
 <template>
-    <div class="header">
-        <span class="iconfont back-icon">&#xe624;</span>
-        <span class="text">标题</span>
+    <div class="header" :class="{'scroll-head':scrollStyle}">
+        <router-link v-slot="{ navigate }" custom to="/">
+            <span @click="navigate" class="iconfont back-icon">&#xe624;</span>
+        </router-link>
+        <span class="title-text">景点详情</span>
     </div>
 </template>
 
 <script>
 export default {
-    name: "DetailHead"
+    name: "DetailHead",
+    data() {
+        return {
+            scrollStyle: false
+        }
+    },
+    mounted() {
+        window.addEventListener("scroll",this.handlScroll)
+    },
+    methods: {
+        handlScroll() {
+            let scrollTop = document.documentElement.scrollTop;
+            if(scrollTop>40){
+                this.scrollStyle = true
+            }
+            else{
+                this.scrollStyle = false
+            }
+        }
+    }
 }
 </script>
 
@@ -22,10 +43,9 @@ export default {
     bottom: 0;
     left: 0;
     right: 0;
-    background: $bgColor;
+    background: transparent;
     text-align: left;
-    display: none;
-
+    z-index: 999;
     .back-icon {
         display: inline-block;
         width: .6rem;
@@ -38,12 +58,25 @@ export default {
         border-radius: 50%;
         margin-left: .2rem;
     }
-    .text {
+    .title-text {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-
+        color: #fff;
+        font-size: .32rem;
+        opacity: 0;
     }
-
+    &.scroll-head {
+        background: $bgColor;
+        transition: background-color 0.6s linear;
+        .back-icon {
+            background: transparent;
+            border-radius:initial;
+        }
+        .title-text {
+            opacity: 1;
+            transition: opacity 0.6s linear;
+        }
+    }
 }
 </style>

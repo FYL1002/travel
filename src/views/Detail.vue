@@ -2,6 +2,7 @@
     <div>
         <detail-head></detail-head>
         <detail-banner :imgs="imgs"></detail-banner>
+        <div class="content">list</div>
 
     </div>
 </template>
@@ -29,5 +30,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.content {
+    height: 15rem;
+}
 </style>

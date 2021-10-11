@@ -50,6 +50,7 @@ export default {
     display: flex;
     align-items: center;
     overflow: hidden;
+    z-index: 9999;
 
     .swiper-container{
         height: 6rem;
